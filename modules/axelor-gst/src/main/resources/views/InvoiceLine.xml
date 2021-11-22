@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+  <form name="invoice-line-form" title="Invoice line"
+    model="com.axelor.apps.account.db.InvoiceLine" width="large" id="invoice-line-gst-form"
+    extension="true">
+
+    <extend target="//field[@name='unit']">
+      <insert position="after">
+        <field name="hsbn" readonly="true"/>
+        <field name="gstRate" readonly="true"/>
+        <field name="igst" readonly="true"/>
+        <field name="cgst" readonly="true"/>
+        <field name="sgst" readonly="true"/>
+      </insert>
+    </extend>
+
+  </form>
+  
+
+</object-views>
